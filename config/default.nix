@@ -249,7 +249,7 @@ in
     };
 
     viAlias = true;
-    vimAlias = false; # I use vim for non lsp configuration
+    vimAlias = true; # I use vim for non lsp configuration
 
     opts = {
       number = true; # Show line numbers

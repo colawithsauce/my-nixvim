@@ -34,8 +34,12 @@
         "aarch64-darwin"
       ];
 
+      imports = [
+        inputs.flake-parts.flakeModules.easyOverlay
+      ];
+
       perSystem =
-        { pkgs, system, ... }:
+        { self, pkgs, system, config, ... }:
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
@@ -58,17 +62,23 @@
               allowUnfree = true;
             };
             overlays = [
-              inputs.neovim-nightly.overlay
+              inputs.neovim-nightly.overlays.default
             ];
           };
+
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
           };
 
           packages = {
+            neovim = nvim;
             # Lets you run `nix run .` to start nixvim
             default = nvim;
+          };
+
+          overlayAttrs = {
+            inherit (config.packages) neovim;
           };
         };
     };
