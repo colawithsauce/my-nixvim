@@ -12,7 +12,7 @@
     };
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     vim-pretty-folds = {
       url = "github:luisdavim/pretty-folds";
