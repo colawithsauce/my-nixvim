@@ -254,9 +254,10 @@ in
   opts = {
     number = true; # Show line numbers
     relativenumber = true; # Show relative line numbers
+    background = "dark";
 
     shiftwidth = 2; # Tab width should be 2
-    guicursor = "n-v-c-i:block";
+    # guicursor = "n-v-c-i:block";
     cursorline = true;
 
     backupdir = [ "~/.cache/nvim/backup" "/tmp" ];
