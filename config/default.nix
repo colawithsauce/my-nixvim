@@ -113,16 +113,16 @@ in
     }
   ];
 
-  # colorschemes.vscode.enable = true;
-  colorschemes.catppuccin = {
-    enable = true;
-    settings = {
-      transparent_background = true;
-      flavour = "latte";
-      term_colors = true;
-      show_end_of_buffer = true;
-    };
-  };
+  colorschemes.gruvbox.enable = true;
+  # colorschemes.catppuccin = {
+  #   enable = true;
+  #   settings = {
+  #     transparent_background = true;
+  #     flavour = "latte";
+  #     term_colors = true;
+  #     show_end_of_buffer = true;
+  #   };
+  # };
 
   plugins = {
     lualine.enable = true;
