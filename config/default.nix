@@ -10,6 +10,7 @@ in
 
   luaLoader.enable = true;
   extraPlugins = with pkgs.vimPlugins; [
+    csv
     vim-nix
     vim-rooter
     lexima-vim
