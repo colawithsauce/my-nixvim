@@ -18,6 +18,10 @@
       url = "github:luisdavim/pretty-folds";
       flake = false;
     };
+    todoist-nvim = {
+      url = "github:romgrk/todoist.nvim";
+      flake = false;
+    };
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
   };
 

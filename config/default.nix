@@ -4,12 +4,12 @@ let
     name = "vim-pretty-folds";
     src = inputs.vim-pretty-folds;
   };
-in
-{
-  package = pkgs.neovim-nightly;
-
-  luaLoader.enable = true;
-  extraPlugins = with pkgs.vimPlugins; [
+  todoist = pkgs.vimUtils.buildVimPlugin {
+    name = "todoist-nvim";
+    src = inputs.todoist-nvim;
+  };
+  extraThirdPartyPlugins = [];
+  extraVimPlugins = with pkgs.vimPlugins; [
     csv
     vim-nix
     vim-rooter
@@ -85,6 +85,12 @@ in
       '';
     }
   ];
+in
+{
+  package = pkgs.neovim-nightly;
+
+  luaLoader.enable = true;
+  extraPlugins = extraVimPlugins ++ extraThirdPartyPlugins;
 
   clipboard.register = "unnamedplus";
   clipboard.providers.wl-copy.enable = true;

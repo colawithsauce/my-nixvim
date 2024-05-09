@@ -439,6 +439,7 @@
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
+        "todoist-nvim": "todoist-nvim",
         "vim-pretty-folds": "vim-pretty-folds"
       }
     },
@@ -484,6 +485,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "todoist-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673021285,
+        "narHash": "sha256-qBfPAxSm294O3mm5mAoYpiWJ2CSDDJE0UU+F/oNXFFU=",
+        "owner": "romgrk",
+        "repo": "todoist.nvim",
+        "rev": "7e8a5e58d721bb24c1f48162fed841f12c0c43db",
+        "type": "github"
+      },
+      "original": {
+        "owner": "romgrk",
+        "repo": "todoist.nvim",
         "type": "github"
       }
     },
