@@ -91,7 +91,7 @@ let
   ];
 in
 {
-  package = pkgs.neovim-nightly;
+  package = pkgs.neovim;
 
   luaLoader.enable = true;
   extraPlugins = extraVimPlugins ++ extraThirdPartyPlugins;
