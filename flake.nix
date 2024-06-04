@@ -22,6 +22,10 @@
       url = "github:romgrk/todoist.nvim";
       flake = false;
     };
+    mlir = {
+      url = "path:/home/colawithsauce/Projects/Triton/llvm-project/mlir/utils/vim";
+      flake = false;
+    };
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
   };
 

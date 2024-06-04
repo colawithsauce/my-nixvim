@@ -8,6 +8,10 @@ let
     name = "todoist-nvim";
     src = inputs.todoist-nvim;
   };
+  mlir = pkgs.vimUtils.buildVimPlugin {
+    name = "mlir";
+    src = inputs.mlir;
+  };
   extraThirdPartyPlugins = [];
   extraVimPlugins = with pkgs.vimPlugins; [
     csv
@@ -263,7 +267,9 @@ in
     relativenumber = true; # Show relative line numbers
     background = "dark";
 
-    shiftwidth = 2; # Tab width should be 2
+    shiftwidth = 4; # Tab width should be 2
+    tabstop = 4;
+    expandtab = true;
     # guicursor = "n-v-c-i:block";
     cursorline = true;
 
@@ -341,7 +347,7 @@ in
     if vim.g.neovide then
       -- Put anything you want to happen only in Neovide here
       vim.g.neovide_cursor_animate_command_line = false
-      vim.o.guifont = "0xProto Nerd Font Mono,LXGW WenKai Mono:h18:"
+      vim.o.guifont = "Inconsolata Nerd Font,LXGW WenKai Mono:h18:"
       vim.g.neovide_transparency = 0.9
       vim.g.neovide_input_ime = true
     end
