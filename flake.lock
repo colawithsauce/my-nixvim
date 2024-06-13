@@ -339,19 +339,6 @@
         "type": "github"
       }
     },
-    "mlir": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1711791342,
-        "narHash": "sha256-5PhxSGDDCnO0TD9SAO9+b8MZDlmm5ausGpowIiGo5h8=",
-        "path": "/home/colawithsauce/Projects/Triton/llvm-project/mlir/utils/vim",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/colawithsauce/Projects/Triton/llvm-project/mlir/utils/vim",
-        "type": "path"
-      }
-    },
     "neovim-nightly": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -487,7 +474,6 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
-        "mlir": "mlir",
         "neovim-nightly": "neovim-nightly",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",

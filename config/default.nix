@@ -8,10 +8,6 @@ let
     name = "todoist-nvim";
     src = inputs.todoist-nvim;
   };
-  mlir = pkgs.vimUtils.buildVimPlugin {
-    name = "mlir";
-    src = inputs.mlir;
-  };
   extraThirdPartyPlugins = [];
   extraVimPlugins = with pkgs.vimPlugins; [
     csv
