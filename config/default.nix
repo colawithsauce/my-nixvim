@@ -314,7 +314,7 @@ in
     require('litee.calltree').setup({})
 
     -- terminal
-    vim.opt.shell='/usr/bin/env fish'
+    vim.opt.shell='/usr/bin/env bash'
 
     -- configure codeium keymaps
     vim.keymap.set('i', '<C-;>', function () return vim.fn['codeium#CycleOrComplete']() end, {expr = true})
